@@ -1,0 +1,48 @@
+# Setup Guide for Bhandan Project
+
+## Cloning the Repository
+To get started, clone the repository using the following command:
+
+```bash
+git clone https://github.com/ritikasahay328/Bhandan-Project.git
+cd Bhandan-Project
+```
+
+## Installing Dependencies
+Make sure you have **Node.js** and **npm** installed. Then, install the required packages:
+
+```bash
+npm install
+```
+
+## Environment Variables
+If the project requires specific environment variables, create a `.env` file in the root directory and add the following:
+
+```
+# Example variables
+PORT=3000
+DATABASE_URL=your_database_url
+```
+
+## Running the Application
+To start the application, run:
+
+```bash
+npm start
+```
+```
+Alternatively, for development:
+```bash
+npm run dev
+```
+
+## Accessing the Application
+Once the application is running, you can access it through your web browser at:
+
+```
+http://localhost:3000
+```
+
+---
+
+Feel free to reach out if you encounter any issues!
