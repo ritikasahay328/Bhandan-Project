@@ -3,24 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NRI Dashboard</title>
+    <title>Bandhan | NRI Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>NRI Dashboard</h1>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <h1 class="brand">Bandhan - NRI Dashboard</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="elderly-emergency.html">Elderly Emergency</a>
+                <a href="doctor-consultation.html">Doctor Consult</a>
+                <a href="medicine-shop.html">Medicine Shop</a>
+                <a href="medical-reports.html">Medical Reports</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Health Information</h2>
-            <p>View updates about your elderly parents' health.</p>
+
+    <main class="container page-main">
+        <section class="page-title">
+            <h2>Your parents' health, always visible.</h2>
+            <p>Track daily vitals, appointments, and critical alerts in real-time.</p>
         </section>
-        <section>
-            <h2>Updates</h2>
-            <p>Stay informed about important updates.</p>
+
+        <section class="section-grid">
+            <article class="card metric-card">
+                <h3>Health Snapshot</h3>
+                <ul>
+                    <li>Blood Pressure: <strong>126/82 mmHg</strong></li>
+                    <li>Blood Sugar: <strong>108 mg/dL</strong></li>
+                    <li>Heart Rate: <strong>74 bpm</strong></li>
+                    <li>Medication Adherence: <strong>95%</strong></li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Latest Updates</h3>
+                <ul>
+                    <li>✅ Morning medication taken at 8:15 AM</li>
+                    <li>📅 Next cardiology consultation tomorrow, 11:30 AM</li>
+                    <li>🧪 New blood test report uploaded</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Care Actions</h3>
+                <div class="stack-actions">
+                    <a class="btn" href="doctor-consultation.html">Book Doctor Consultation</a>
+                    <a class="btn" href="medicine-shop.html">Order Medicines</a>
+                    <a class="btn" href="medical-reports.html">Generate Medical Report</a>
+                </div>
+            </article>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 NRI Dashboard</p>
+
+    <footer class="site-footer">
+        <p>© 2026 Bandhan. NRI family care dashboard.</p>
     </footer>
 </body>
 </html>

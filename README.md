@@ -1,31 +1,39 @@
 # Bhandan Project
 
 ## Overview
-Bhandan is a comprehensive software project designed to streamline user engagement and enhance productivity through innovative features.
+Bandhan is an online e-health website for NRIs living outside India to track the health of their elderly parents.
 
-## Features
-- **User Management**: Creates, updates, and deletes user profiles.
-- **Project Tracking**: Keep track of multiple projects and their progress.
-- **Collaboration Tools**: Enable users to collaborate in real-time.
+## Current Website Pages
+- `index.html`: Home/landing page with service navigation
+- `nri-dashboard.html`: NRI health updates dashboard
+- `elderly-emergency.html`: Elderly emergency/SOS support page
+- `doctor-consultation.html`: Online doctor consultation form
+- `medicine-shop.html`: Online medicine ordering page
+- `medical-reports.html`: Medical report generation page
 
-## Setup Instructions
-1. **Clone the repository**: 
-    ```bash
-    git clone https://github.com/ritikasahay328/Bhandan-Project.git
-    ```
-2. **Install dependencies**: 
-    Navigate to the project directory and run the following command:
-    ```bash
-    npm install
-    ```
-3. **Run the application**: 
-    Finally, start the application using:
-    ```bash
-    npm start
-    ```
+## Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ritikasahay328/Bhandan-Project.git
+   cd Bhandan-Project
+   ```
+2. Start the website server:
+   ```bash
+   python3 server.py
+   ```
+3. Open in browser:
+   ```text
+   http://localhost:4173
+   ```
 
-## Contribution
-We welcome contributions! Please fork the repository and open a pull request for any enhancements or features you'd like to add.
+To use a custom port:
 
-## License
-This project is licensed under the MIT License.
+```bash
+PORT=8000 python3 server.py
+```
+
+## Troubleshooting
+If the browser shows "This site can't be reached":
+- Make sure `python3 server.py` is still running.
+- Check that you're opening the same port printed in the terminal.
+- Try `http://127.0.0.1:4173`.

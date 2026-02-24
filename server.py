@@ -1,15 +1,23 @@
-import http.server
-import socketserver
+"""Simple static file server for the Bandhan website."""
 
-PORT = 8000
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+import os
 
-class Handler(http.server.SimpleHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type', 'text/html')
-        self.end_headers()
-        self.wfile.write(b'Hello, World! This is the server running on port 8000.')
+HOST = "0.0.0.0"
+PORT = int(os.getenv("PORT", "4173"))
 
-with socketserver.TCPServer(('', PORT), Handler) as httpd:
-    print(f"Serving at port {PORT}")
-    httpd.serve_forever()
+
+def run() -> None:
+    server = ThreadingHTTPServer((HOST, PORT), SimpleHTTPRequestHandler)
+    print(f"Bandhan site running at http://localhost:{PORT}")
+    print("Press Ctrl+C to stop.")
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\nShutting down server...")
+    finally:
+        server.server_close()
+
+
+if __name__ == "__main__":
+    run()

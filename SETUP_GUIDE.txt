@@ -8,41 +8,31 @@ git clone https://github.com/ritikasahay328/Bhandan-Project.git
 cd Bhandan-Project
 ```
 
-## Installing Dependencies
-Make sure you have **Node.js** and **npm** installed. Then, install the required packages:
-
-```bash
-npm install
-```
-
-## Environment Variables
-If the project requires specific environment variables, create a `.env` file in the root directory and add the following:
-
-```
-# Example variables
-PORT=3000
-DATABASE_URL=your_database_url
-```
+## Prerequisites
+You only need **Python 3** installed for this static website.
 
 ## Running the Application
-To start the application, run:
+Start the site with:
 
 ```bash
-npm start
+python3 server.py
 ```
-```
-Alternatively, for development:
+
+Optional custom port:
+
 ```bash
-npm run dev
+PORT=8000 python3 server.py
 ```
 
 ## Accessing the Application
-Once the application is running, you can access it through your web browser at:
+Once the server is running, open:
 
+```text
+http://localhost:4173
 ```
-http://localhost:3000
-```
+
+If you used a custom `PORT`, replace `4173` with that value.
 
 ---
 
-Feel free to reach out if you encounter any issues!
+If the site says it can't be reached, confirm the server is running in the same terminal and that the URL port matches the running port.
