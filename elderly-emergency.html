@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Call</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .sos-button {
+            padding: 20px;
+            font-size: 24px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emergency Call</h1>
+    <p>If you are in an emergency, press the SOS button below.</p>
+    <button class="sos-button" onclick="makeEmergencyCall()">Call Emergency Number</button>
+
+    <script>
+        function makeEmergencyCall() {
+            // Replace '1234567890' with the actual emergency number
+            window.location.href = 'tel:1234567890'; 
+        }
+    </script>
+</body>
+</html>
