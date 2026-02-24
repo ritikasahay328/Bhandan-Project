@@ -1,24 +1,27 @@
-// script.js
-
-// Function for emergency calls
 function makeEmergencyCall() {
-    console.log('Making an emergency call...');
-    // logic for emergency call
+    const status = document.getElementById('emergency-status');
+    if (status) {
+        status.textContent = 'Status: Connecting to emergency support...';
+    }
+
+    window.location.href = 'tel:+9118001239000';
 }
 
-// Function for consultations
-function scheduleConsultation() {
-    console.log('Scheduling a consultation...');
-    // logic for scheduling consultation
-}
+const reportForm = document.getElementById('report-form');
+if (reportForm) {
+    reportForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-// Function for report generation
-function generateReport() {
-    console.log('Generating report...');
-    // logic for report generation
-}
+        const patient = document.getElementById('patient-name').value;
+        const doctor = document.getElementById('doctor-name').value;
+        const details = document.getElementById('report-details').value;
+        const preview = document.getElementById('report-preview');
 
-// Example usage
-makeEmergencyCall();
-scheduleConsultation();
-generateReport();
+        preview.textContent =
+            `Bandhan Medical Report\n` +
+            `Patient: ${patient}\n` +
+            `Doctor: ${doctor}\n` +
+            `Details: ${details}\n` +
+            `Generated On: ${new Date().toLocaleString()}`;
+    });
+}

@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Reports</title>
+    <title>Bandhan | Medical Reports</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Medical Reports</h1>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <h1 class="brand">Medical Reports</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="nri-dashboard.html">NRI Dashboard</a>
+                <a href="elderly-emergency.html">Emergency</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
+
+    <main class="container page-main">
+        <section class="card form-card">
             <h2>Generate Report</h2>
-            <form>
-                <label for="patient-name">Patient Name:</label>
-                <input type="text" id="patient-name" name="patient-name" required>
-                <label for="doctor-name">Doctor Name:</label>
-                <input type="text" id="doctor-name" name="doctor-name" required>
-                <label for="report-details">Report Details:</label>
-                <textarea id="report-details" name="report-details" required></textarea>
-                <button type="submit">Generate Report</button>
+            <form class="app-form" id="report-form">
+                <label for="patient-name">Patient Name</label>
+                <input type="text" id="patient-name" required>
+
+                <label for="doctor-name">Doctor Name</label>
+                <input type="text" id="doctor-name" required>
+
+                <label for="report-details">Report Details</label>
+                <textarea id="report-details" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Generate Report</button>
             </form>
-        </section>
-        <section>
-            <h2>Manage Reports</h2>
-            <p>List of generated medical reports will be displayed here.</p>
+            <pre id="report-preview" class="report-preview">Generated report will appear here.</pre>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Medical Reports. All rights reserved.</p>
-    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
